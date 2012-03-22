@@ -1,0 +1,11 @@
+MAIL_FILE = mail
+MAIL_ATTA = ./atta/
+
+MAIL_TO = <user@example.com>;<>
+MAIL_CC = <user1@example.com>;<>
+
+SMTP_USER = <your name>
+SMTP_PSWD = *******
+
+SMTP_SEVR = smtp.example.com
+SMTP_PORT = 465
