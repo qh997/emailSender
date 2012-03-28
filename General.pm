@@ -38,22 +38,6 @@ sub get_mail_content {
     return $ret_subject, $ret_body;
 }
 
-sub get_remain_time {
-    my $s_time = shift;
-    my $e_time = shift;
-
-    my $print_str = '';
-    my $r_time = $e_time - $s_time;
-    my $hor = int($r_time / 3600);
-    $hor =~ s/^(\d{1})$/0$1/;
-    my $min = int(($r_time - $hor * 3600) / 60);
-    $min =~ s/^(\d{1})$/0$1/;
-    my $sec = $r_time - $hor * 3600 - $min * 60;
-    $sec =~ s/^(\d{1})$/0$1/;
-
-    return $hor.':'.$min.':'.$sec;
-}
-
 sub get_file_list {
     my $path = shift;
     $path =~ s{(?<!/)$}{/};
